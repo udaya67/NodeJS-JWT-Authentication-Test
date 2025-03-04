@@ -49,7 +49,7 @@ app.post('/api/login', (req, res) => {
     let token = jwt.sign(
         { id: user.id, username: user.username }, 
         secretKey, 
-        { expiresIn: 60 }  // 60 seconds for testing
+        { expiresIn: 180 }  //3 minutes
     );
     
     return res.json({
